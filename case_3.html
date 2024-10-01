@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 3</title>
+
+    <style>
+
+        section{
+            width: 100%;
+            height: 100vh;
+
+            position: relative;
+        }
+
+        div {
+            width: 250px;
+            height: 150px;
+            background: orangered;
+            border-radius: 10%;
+            animation-name: my-animation;
+            animation-duration: 2s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+
+            position: absolute;
+        }
+
+        @keyframes my-animation {
+            0% {
+                background: blue;
+                left: 0;
+                top: 0;
+                transform: rotate(0deg);
+            }
+
+            25% {
+                background: orange;
+                left: 85vw;
+                top: 0;
+                transform: rotate(180deg);
+            }
+
+            50% {
+                background: red;
+                left: 85vw;
+                top: 83vh; /* Move it to the bottom right */
+                transform: rotate(360deg);
+            }
+
+            75% {
+                background: hotpink;
+                left: 0;
+                top: 83vh;
+                transform: rotate(180deg);
+            }
+
+            100% {
+                background: orangered;
+                left: 0;
+                top: 0;
+                transform: rotate(0deg);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+<section>
+    <div></div>
+</section>
+
+</body>
+</html>

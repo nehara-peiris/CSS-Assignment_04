@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 6</title>
+
+    <link rel="stylesheet" href="assets/style/normalize.css">
+
+    <style>
+
+        section{
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+
+            position: relative;
+            display: flex;
+
+            overflow: hidden;
+        }
+
+        #sky{}
+
+        #road{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: roadMove 10s linear infinite;
+        }
+
+        #city{
+            display: flex;
+
+            position: absolute;
+            left: 0px;
+            top: 410px;
+            animation: cityMove 10s linear infinite;
+        }
+
+
+        #car{
+            position: absolute;
+            align-self: center;
+
+            top: 500px;
+            left: 40%;
+        }
+
+        #wheel>img {
+            animation: rotateWheels 2s linear infinite;
+        }
+
+        #wheel>img:first-child{
+            position: absolute;
+            left: 820px;
+            top: 640px;
+        }
+
+        #wheel>img:nth-child(2){
+            position: absolute;
+            left: 1187px;
+            top: 640px;
+        }
+
+        @keyframes rotateWheels {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes cityMove {
+            0% { left: 0; }
+            100% { left: -150%; }
+        }
+
+        @keyframes roadMove {
+            0% { left: 0; }
+            100% { left: -150%; }
+        }
+
+    </style>
+
+</head>
+<body>
+
+<main>
+    <section>
+        <div id="sky">
+            <img src="assets/images/car/sky.jpg" alt="slide1">
+        </div>
+
+        <div id="city">
+            <img src="assets/images/car/city.png" alt="slide2">
+            <img src="assets/images/car/city.png" alt="slide2">
+            <img src="assets/images/car/city.png" alt="slide2">
+            <img src="assets/images/car/city.png" alt="slide2">
+        </div>
+
+        <div id="road">
+            <img src="assets/images/car/road.jpg" alt="slide3">
+        </div>
+
+        <div id="car">
+            <img src="assets/images/car/car.png" alt="slide4" width="600">
+        </div>
+
+        <div id="wheel">
+            <img src="assets/images/car/wheel.png" alt="slide5" width="110">
+            <img src="assets/images/car/wheel.png" alt="slide5" width="110">
+        </div>
+    </section>
+
+</main>
+
+
+
+</body>
+</html>
